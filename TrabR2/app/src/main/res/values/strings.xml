@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TrabR2</string>
     <string name="Recuperação" />
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

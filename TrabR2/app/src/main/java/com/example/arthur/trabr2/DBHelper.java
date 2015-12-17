@@ -25,7 +25,7 @@ public class DBHelper extends SQLiteOpenHelper{
             +TRABALHO + "varchar(100),"
             +NOTA + "varchar(4),"
             +COMENTARIO + "varchar(200),"
-            +TB
+            +TB + ""
             + ID +"(integer primary key autoincrement);";
 
 
