@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_TRAB = "Recuperacao";
+    private static final String DATABASE_TRAB = "Recuperacao.db";
 
     private static final String NOME = "avaliador";
     private static final String TRABALHO = "titulo";
@@ -20,16 +20,15 @@ public class DBHelper extends SQLiteOpenHelper{
     private static final String TB = "avaliação";
 
 
-    private static final String TB_CREATE = "CEATE_TABLE"
-            + NOME + "varchar(100),"
+    private static final String TB_CREATE = "CEATE TABLE user+(_id " +"integer primary key autoincrement,"
+            +NOME + "varchar(100),"
             +TRABALHO + "varchar(100),"
             +NOTA + "varchar(4),"
             +COMENTARIO + "varchar(200),"
-            +TB + ""
-            + ID +"(integer primary key autoincrement);";
+            +TB + ");";
 
 
-    DBHelper(Context context){
+    public DBHelper(Context context){
         super (context, DATABASE_TRAB, null, DATABASE_VERSION);
     }
 
@@ -40,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop TB_CREATE");
+        db.execSQL("drop Table user");
         onCreate(db);
     }
 }
